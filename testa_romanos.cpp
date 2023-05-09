@@ -35,3 +35,11 @@ TEST_CASE("Numeros romanos - algarismos decrescentes", "[romanos]") {
     REQUIRE(romanos_para_decimal("XC") == 90);
     REQUIRE(romanos_para_decimal("CM") == 900);
 }
+
+ TEST_CASE("Numeros romanos - algarismos inválidos", "[romanos]") {
+    REQUIRE(romanos_para_decimal("G") == -1);
+    REQUIRE(romanos_para_decimal("i") == -1);
+    REQUIRE(romanos_para_decimal("x") == -1);
+    REQUIRE(romanos_para_decimal("l") == -1);
+    REQUIRE(romanos_para_decimal("P") == -1);
+}
