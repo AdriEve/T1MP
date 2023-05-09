@@ -12,14 +12,19 @@ int romanos_para_decimal(string const num_romano) {
     {'D', 500},
     {'M', 1000},
   };
+  try{
+    for (auto &&i : num_romano){
+      if (numero < numeros.at(i)){
+        numero -= (numeros.at(i));
+        numero = numero *(-1);
+        }
+      else
+        numero += numeros.at(i);
+    };
+    return numero;
+  }
+  catch (const std::exception &e){
+    return -1;
+  }
 
-  for (auto &&i : num_romano){
-    if (numero < numeros.at(i)){
-      numero -= (numeros.at(i));
-      numero = numero *(-1);
-      }
-    else
-      numero += numeros.at(i);
-  };
-  return numero;
 }
