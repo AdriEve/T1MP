@@ -14,6 +14,15 @@ TEST_CASE("Numeros romanos - algarismos únicos", "[romanos]") {
     REQUIRE(romanos_para_decimal("M") == 1000);
 }
 
+TEST_CASE("Numeros romanos - algarismos repetidos", "[romanos]") {
+    REQUIRE(romanos_para_decimal("III") == 3);
+    REQUIRE(romanos_para_decimal("XX") == 20);
+    REQUIRE(romanos_para_decimal("CCC") == 300);
+    REQUIRE(romanos_para_decimal("MM") == 2000);
+}
+
+
+
 
 
 
