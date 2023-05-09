@@ -1,19 +1,19 @@
 // Copyright [2023] <Adriele>
 #include "romanos.hpp"
-int romanos_para_decimal(std::string const num_romano) {
-  if (num_romano== "I")
-    return 1;
-  else if (num_romano== "V")
-    return 5;
-  else if (num_romano== "X")
-    return 10;
-  else if (num_romano== "L")
-    return 50;
-  else if (num_romano== "C")
-    return 100;
-  else if (num_romano== "D")
-    return 500;
-  else if (num_romano== "M")
-    return 1000;
-  return -1;
+using namespace std;
+int romanos_para_decimal(string const num_romano) {
+   int numero = 0;
+  map<char, int> numeros = {
+    {'I', 1},
+    {'V', 5},
+    {'X', 10},
+    {'L', 50},
+    {'C', 100},
+    {'D', 500},
+    {'M', 1000},
+  };
+  for (auto &&i : num_romano){
+      numero += numeros.at(i);
+  };
+    return numero;
 }
