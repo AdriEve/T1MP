@@ -1,1 +1,6 @@
-int romanos_para_decimal(char const * num_romano);
+// Copyright [2023] <Adriele>
+#ifndef ROMANOS_HPP_
+#define ROMANOS_HPP_
+#include <string>
+int romanos_para_decimal(std::string const num_romano);
+#endif  // ROMANOS_HPP_
