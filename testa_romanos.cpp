@@ -28,10 +28,10 @@ TEST_CASE("Numeros romanos - algarismos crescentes", "[romanos]") {
     REQUIRE(romanos_para_decimal("MCL") == 1150);
 }
 
-
-
-
-
-
-
-
+TEST_CASE("Numeros romanos - algarismos decrescentes", "[romanos]") {
+    REQUIRE(romanos_para_decimal("IV") == 4);
+    REQUIRE(romanos_para_decimal("IX") == 9);
+    REQUIRE(romanos_para_decimal("XL") == 40);
+    REQUIRE(romanos_para_decimal("XC") == 90);
+    REQUIRE(romanos_para_decimal("CM") == 900);
+}
