@@ -21,6 +21,13 @@ TEST_CASE("Numeros romanos - algarismos repetidos", "[romanos]") {
     REQUIRE(romanos_para_decimal("MM") == 2000);
 }
 
+TEST_CASE("Numeros romanos - algarismos crescentes", "[romanos]") {
+    REQUIRE(romanos_para_decimal("XI") == 11);
+    REQUIRE(romanos_para_decimal("LX") == 60);
+    REQUIRE(romanos_para_decimal("CXIII") == 113);
+    REQUIRE(romanos_para_decimal("MCL") == 1150);
+}
+
 
 
 
