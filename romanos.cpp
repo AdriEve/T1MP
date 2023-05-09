@@ -12,7 +12,13 @@ int romanos_para_decimal(string const num_romano) {
     {'D', 500},
     {'M', 1000},
   };
+
   for (auto &&i : num_romano){
+    if (numero < numeros.at(i)){
+      numero -= (numeros.at(i));
+      numero = numero *(-1);
+      }
+    else
       numero += numeros.at(i);
   };
   return numero;
